@@ -26,6 +26,22 @@ class Rename:
             new_path = pathOfFiles + newName + "_" + str(count) + extensionType   
             os.rename(absolute_name, new_path)
             count += 1
+            
+    # this func will only rename the selected file types
+    def rename_only_certain_file_type(filePath,newName,fileType):
+        count = 1
+        #iterate over files in path and only name the selected the file type
+        for file in os.listdir(filePath):
+            fullPath = filePath + file
+            currentExtension = pathlib.Path(fullPath).suffix
+            currentExtension = currentExtension.strip(".")
+            #get file type
+            if currentExtension == fileType:
+                new_path = filePath + newName + "_" + str(count) + pathlib.Path(fullPath).suffix
+                os.rename(fullPath,new_path)
+                count += 1
+
+            
 
 
 
