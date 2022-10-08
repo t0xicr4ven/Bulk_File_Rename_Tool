@@ -1,5 +1,11 @@
-# PROJECT NAME HERE
+# Python Command Line Emulator
 ---
-`This script will bulk rename files in a folder. Plus more`
+`Will work like cli, with a few bonus functions`
+
+`Commands`
+`quit - exit program`
+`help - list some basic help`
+`ls   - list current dir`
+`cd[path]  - change dir `
 
 
